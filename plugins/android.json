@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.bitymina.dss2016.eu"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.bitymina.dss2016.eu"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.bitymina.dss2016.eu"
+        }
+    },
+    "dependent_plugins": {}
+}

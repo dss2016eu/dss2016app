@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DSS2016</title>
+
+  <meta name="description" content="DSS2016 mobile web app">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript" src="cordova.js"></script>
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="">
+
+  <link href="img/startup/startup.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+  <link href="img/startup/startup-retina.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+  <link href="img/startup/startup-retina-4in.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+  <link href="img/startup/startup-tablet-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+  <link href="img/startup/startup-tablet-landscape.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+  <link href="img/startup/startup-tablet-portrait-retina.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+  <link href="img/startup/startup-tablet-landscape-retina.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  <!-- Win8 -->
+  <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#222222">
+  <meta http-equiv="cleartype" content="on">
+
+  <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <script src="vendor/jquery/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
+  <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+
+  <script type="text/javascript">
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");
+    b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+
+    '//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';d=c.getElementsByTagName("script")[0];
+    d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){
+    var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(
+    Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?g=a[f]=[]:
+    f="mixpanel";g.people=g.people||[];h=['disable','track','track_pageview','track_links',
+    'track_forms','register','register_once','unregister','identify','alias','name_tag','set_config',
+    'people.set','people.set_once','people.increment','people.track_charge','people.append'];
+    for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.2;})(document,window.mixpanel||[]);
+    mixpanel.init('41aca88360ef6164533944b503484055');
+  </script>
+</head>
+<body>
+
+  <div id="app">
+
+    <div data-role="page" id="hizkuntza" style="background-color: #EEEEEE;">
+      <div data-role="content" id="home-container">
+        <img id="hizkuntza_img" src="img/res/dss2016_eu.png" alt="dss2016" align="middle" style="max-width:80%;height:auto;display: block;margin-top: 25px;margin-bottom: 25px;margin-left: auto;margin-right: auto;" >
+        <hr style="max-width:100%;height:2px;color: #999999; background-color: #999999;">
+        <!--<a id="hizkuntza_eu" data-role="none" data-transition="slide" href="#events" class="buttondss">Euskara</a>-->
+        <a id="hizkuntza_eu" class="buttondss">Euskara</a>
+        <a id="hizkuntza_es" class="buttondss">Castellano </a>
+        <a id="hizkuntza_fr" class="buttondss">Français</a>
+        <a id="hizkuntza_en" class="buttondss">English</a>
+        <hr style="max-width:100%;height:2px;display: block;color: #999999; background-color: #999999;margin-bottom: 20px;">
+
+        <div>
+          <div  style="display: inline-block;width:49%; margin-left: auto; margin-right: auto; margin-top: 10px;background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-agenda" data-role="none" data-transition="slide" href="#events" align="middle" style="text-decoration: none">
+              <img src="img/res/ordularia.png" alt="Home" style="width:30%;display: block; margin-left: auto; margin-right: auto;" >
+              <p id="ini-but-agenda-p" style="width:100%;display: block;color: #46A0DC;">Agenda</p>
+            </a>
+          </div>
+          <div  style="display: inline-block; width:49%; margin-left: auto; margin-right: auto; margin-top: 10px;background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-map" data-role="none" data-transition="slide" href="#map-events" align="middle" style="text-decoration: none">
+              <img src="img/res/tokia.png" alt="Home" style="width:20%;display: block; margin-left: auto; margin-right: auto;" >
+              <p id="ini-but-map-p" style="width:100%;display: block;color: #46A0DC;">Mapa</p>
+            </a>
+          </div>
+          <div  style="display: inline-block;width:49%; margin-left: auto; margin-right: auto; margin-top: 10px; background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-info" data-role="none" align="middle" style="text-decoration: none">
+              <img src="img/res/info.png" alt="Home" style="width:30%;display: block; margin-left: auto; margin-right: auto;" >
+              <p id="ini-but-info-p" style="width:100%;display: block;color: #46A0DC;">Informazioa</p>
+            </a>
+          </div>
+          <div  style="display: inline-block;width:49%; margin-left: auto; margin-right: auto; margin-top: 10px; background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-web" data-role="none" data-transition="slide" href="http://dss2016.eu/eu/" align="middle" style="text-decoration: none">
+              <img src="img/res/web.png" alt="Home" style="width:30%;display: block; margin-left: auto; margin-right: auto;" >
+              <p style="width:100%;display: block;color: #46A0DC;">DSS2016.EU</p>
+            </a>
+          </div>
+          <hr style="max-width:100%;height:2px;display: block;color: #999999; background-color: #999999;margin-bottom: 20px;">
+          <div  style="display: inline-block;width:19%; margin-left: 8%; margin-right: auto; margin-top: 10px; background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-facebook" data-role="none" data-transition="slide" href="https://www.facebook.com/DSS2016Europe" align="middle" style="text-decoration: none">
+              <img src="img/res/facebook.png" alt="Home" style="width:50%;display: block; margin-left: auto; margin-right: auto;" >
+              <!--<p style="width:100%;display: block;">Facebook</p>-->
+            </a>
+          </div>
+
+          <div  style="display: inline-block;width:19%; margin-left: auto; margin-right: auto; margin-top: 10px; background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-twiter" data-role="none" data-transition="slide" href="https://twitter.com/DSS2016Europe" align="middle" style="text-decoration: none">
+              <img src="img/res/twitter.png" alt="Home" style="width:50%;display: block; margin-left: auto; margin-right: auto;" >
+              <!--<p style="width:100%;display: block;">Twitter</p>-->
+            </a>
+          </div>
+
+          <div  style="display: inline-block;width:19%; margin-left: auto; margin-right: auto; margin-top: 10px; background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-instagram" data-role="none" data-transition="slide" href="https://www.instagram.com/dss2016/" align="middle" style="text-decoration: none">
+              <img src="img/res/igram.png" alt="Home" style="width:50%;display: block; margin-left: auto; margin-right: auto;" >
+              <!--<p style="width:100%;display: block;">Instagram</p>-->
+            </a>
+          </div>
+          <div  style="display: inline-block;width:19%; margin-left: auto; margin-right: 8%; margin-top: 10px; background-color: #eeeeee; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none; text-align:center;">
+            <a id="ini-but-youtube" data-role="none" data-transition="slide" href="https://www.youtube.com/user/sansebastian2016" align="middle" style="text-decoration: none">
+              <img src="img/res/youtube.png" alt="Home" style="width:50%;display: block; margin-left: auto; margin-right: auto;" >
+              <!--<p style="width:100%;display: block;">YouTube</p>-->
+            </a>
+          </div>
+        </div>
+        <hr style="max-width:100%;height:2px;display: block;color: #999999; background-color: #999999; margin-bottom: 20px;margin-top: 20px;">
+        <!--<div style="color:#46A0DC;position: absolute; bottom: 0; left: 0;font-size: 100%; width:100%; display: table; "><p style="text-align:center; vertical-align: middle;  display: table-cell;   "><a id="hizkuntza_ref" href="http://dss2016.eu/eu/" class="buttonref">DSS2016.EU</a>     #Donostia2016</p></div>-->
+        <div style="color:#46A0DC;position: absolute; bottom: 20px; left: 0;font-size: 100%; width:100%; display: table; "><p style="font-size: 1.5em;text-align:center; vertical-align: middle;  display: table-cell;   ">#Donostia2016</p></div>
+      </div>
+    </div>
+
+    <div data-role="page" id="events" style="background-color: #EEEEEE;">
+      <div data-role="header" data-position="fixed" style="background-color: #EEEEEE;">
+        <a id="events-lang" data-role="none" data-transition="slide" href="#hizkuntza" align="middle" style="width:8%;  margin-left: 1%; margin-top: 3%;background-color: #EEEEEE; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none;">
+          <img src="img/res/atzera.png" alt="Back" style="width:100%;margin-top: 2%;display: block;" >
+        </a>
+
+        <img id="events-title" src="img/res/dss2016_eu.png" alt="#Donostia2016" style="max-width:80%;height:auto;display: block;margin-top: 2%; margin-left: auto;margin-right: 2%;"/>
+
+        <div id="header-cat-container">
+          <div id="header-cat-sel">
+            <select id="categories-select" class="catList" >
+            <!--<option id= "base-option" value="-1">Please select a category</option>-->
+            </select>
+          </div>
+        </div>
+        <!--<a href="#info" >info</a>-->
+      </div>
+      <div data-role="content" style="background-color: #EEEEEE;">
+        <ul id="events-list" data-role="listview" data-inset="true" data-filter="true">
+
+        </ul>
+      </div>
+    </div>
+
+    <div data-role="page" id="details" style="background-color: #EEEEEE;">
+      <div data-role="header" data-position="fixed" style="background-color: #EEEEEE;">
+        <a id="details-back" data-role="none" align="middle" style="width:8%;  margin-left: 1%; margin-top: 3%;background-color: #EEEEEE; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none;">
+          <img src="img/res/atzera.png" alt="Back" style="width:100%;margin-top: 2%;display: block;" >
+        </a>
+        <img id="details-title" src="img/res/dss2016_eu.png" alt="#Donostia2016" style="width:80%;height:auto;display: block;margin-top: 2%;margin-bottom: 2%;margin-left: auto;margin-right: 2%;"/>
+
+      </div>
+
+      <div data-role="content" style="background-color: #EEEEEE;">
+        <img id="event-cover" width="100%" src="#">
+
+        <section class="ui-body ui-body-a">
+          <p id="event-title" rows="4" cols="40" class="titulodetail">Title</p>
+          <div id="detail-cont-tag">
+            <div id="#detail-cat-container">
+
+            </div>
+            <a id="share-but" data-role="none" data-transition="slide" align="middle" style="text-decoration: none">
+              <img src="img/res/redes.png" alt="Share" style="width:13%;display: block; margin-left: 0px; margin-right: auto; margin-top: 20px;" >
+              <p id="share-but-p" style="width:15%;display: block; margin-left: 0px; margin-right: auto; vertical-align: center; margin-top: 5px;">Share</p>
+            </a>
+          </div>
+          <br>
+          <div id="event-description" color="#999999">Description</div>
+        </section>
+
+        <section class="ui-body ui-body-a">
+
+          <h3 id="when-title">
+            <img src="img/res/ordularia.png" alt="When" style="width:25px; height:25px;display: block;" >
+          </h3>
+
+          <p><strong id="starting-title">Starting</strong>:<br><span id="event-start-date">starting</span></p>
+          <p><strong id="ending-title">Ending</strong>:<br><span id="event-end-date">ending</span></p>
+
+        </section>
+
+        <section class="ui-body ui-body-a" >
+          <h3 id="where-title">
+            <img src="img/res/tokia.png" alt="Where" style="width:25px; height:25px;display: block;" >
+          </h3>
+          <p><a href="#map" id="event-location">location</a></p>
+          <a href="#map" id="event-map"></a>
+        </section>
+
+        <section id="event-registration-container" class="ui-body ui-body-a">
+          <h3 id="registration-title">Registration</h3>
+          <p id="event-price-container"><strong id="price-title">Price</strong>: <span id="event-price">0</span></p>
+          <p id="event-spots-container"><strong id="spots-title">Places left</strong>: <span id="event-spots">0</span></p>
+          <p id="event-deadline-container"><strong id="deadline-title">Deadline</strong>: <span id="event-deadline">0</span></p>
+          <a id="registration-button" data-role="button" target="_blank" href="#" data-icon="arrow-r" data-iconpos="right">
+            Register
+          </a>
+        </section>
+
+        <section id="event-gallery-container" class="ui-body ui-body-a">
+          <h3 id="gallery-title">Gallery</h3>
+          <div id="event-gallery">
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div data-role="page" id="map">
+      <div data-role="header" data-position="fixed" style="background-color: #EEEEEE;">
+        <a id="map-back" data-role="none" data-transition="slide" href="#details" align="middle" style="width:8%;  margin-left: 1%; margin-top: 3%;background-color: #EEEEEE; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none;">
+          <img src="img/res/atzera.png" alt="Back" style="width:100%;margin-top: 2%;display: block;" >
+        </a>
+        <img id="map-title" src="img/res/dss2016_eu.png" alt="#Donostia2016" style="width:80%;height:auto;display: block;margin-top: 2%;margin-bottom: 2%;margin-left: auto;margin-right: 2%;"/>
+
+      </div>
+
+      <div data-role="content" id="map-canvas">
+
+      </div>
+    </div>
+
+    <div data-role="page" id="map-events">
+      <div data-role="header" data-position="fixed" style="background-color: #EEEEEE;">
+        <a id="map-events-back" data-role="none" data-transition="slide" href="#hizkuntza" align="middle" style="width:8%; margin-left: 1%; margin-top: 3%;background-color: #EEEEEE; background-repeat:no-repeat; border: 0px; cursor:pointer; overflow: hidden; outline:none;">
+          <img src="img/res/atzera.png" alt="Back" style="width:100%;margin-top: 2%;display: block;" >
+        </a>
+        <img id="map-events-title" src="img/res/dss2016_eu.png" alt="#Donostia2016" style="width:80%;height:auto;display: block;margin-top: 2%;margin-bottom: 2%;margin-left: auto;margin-right: 2%;"/>
+
+      </div>
+      <div data-role="content" id="map-events-canvas">
+
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/moment/moment-with-langs.min.js"></script>
+  <script src="//maps.google.com/maps/api/js?key=AIzaSyCM2QBu-9et8SCre5f14eECly3QQZX1MqE&amp;sensor=true"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
